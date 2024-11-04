@@ -1,0 +1,83 @@
+:root {
+  --background-light: #f8f9fa;
+  --background-dark: #333;
+  --text-light: #333;
+  --text-dark: #f8f9fa;
+  --button-bg-light: #ccc;
+  --button-bg-dark: #555;
+  --button-outline-light: #aaa;
+  --button-outline-dark: #777;
+}
+
+[data-theme='light'] {
+  --background: var(--background-light);
+  --foreground: var(--text-light);
+  --button-bg: var(--button-bg-light);
+  --button-outline: var(--button-outline-light);
+}
+
+[data-theme='dark'] {
+  --background: var(--background-dark);
+  --foreground: var(--text-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-outline: var(--button-outline-dark);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  width: 50%;
+  margin-right: 20px;
+}
+
+.hero-image {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--foreground);
+}
+
+.hero p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .hero-image {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hero-content {
+    padding-top: 24px;
+    width: 100%;
+    margin-right: 0;
+  }
+}

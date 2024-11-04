@@ -1,0 +1,81 @@
+:root {
+  --background-light: #f8f9fa;
+  --background-dark: #333;
+  --text-light: #333;
+  --text-dark: #f8f9fa;
+  --button-bg-light: #ccc;
+  --button-bg-dark: #555;
+  --button-outline-light: #aaa;
+  --button-outline-dark: #777;
+}
+
+[data-theme='light'] {
+  --background: var(--background-light);
+  --foreground: var(--text-light);
+  --button-bg: var(--button-bg-light);
+  --button-outline: var(--button-outline-light);
+}
+
+[data-theme='dark'] {
+  --background: var(--background-dark);
+  --foreground: var(--text-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-outline: var(--button-outline-dark);
+}
+
+.main {
+  padding: 40px 0;
+  background-color: var(--background);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--foreground);
+}
+
+.scroll-area {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .scroll-button {
+    display: none;
+  }
+
+  .card-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+  }
+}
