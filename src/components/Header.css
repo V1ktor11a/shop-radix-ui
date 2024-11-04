@@ -84,6 +84,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     padding: 10px;
     min-width: 150px;
+    right: 0;
   }
   .mobile-link {
     text-decoration: none;
